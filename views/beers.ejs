@@ -1,0 +1,8 @@
+<h2>The beers page</h2>
+
+<% beersFromApi.forEach(element => { %>
+    <h1> <img src='<%-element.image_url%>'></h1>
+    <h2><%-element.name%></h2>
+    <h3><%-element.description%></h3>
+    <h4><%-element.tagline%></h4>
+<% }) %>
