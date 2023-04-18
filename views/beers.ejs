@@ -1,0 +1,5 @@
+<ul class="beers">
+  <% beersFromApi.forEach(beer => { %>
+  <li><%- include("partials/beer",{beer:beer}) %></li>
+  <% }); %>
+</ul>
