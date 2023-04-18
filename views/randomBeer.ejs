@@ -1,0 +1,14 @@
+<div class="random-page">
+  <%- include("partials/beer",{beer:randomBeerFromApi[0]}) %>
+  <div class="random-page-extra">
+    <p><strong>Food Pairing:</strong></p>
+    <ul>
+      <% randomBeerFromApi[0].food_pairing.forEach(food => { %>
+      <li><%- food %></li>
+      <% }); %>
+    </ul>
+    <p>
+      <strong>Brewers Tips:</strong> <%- randomBeerFromApi[0].brewers_tips %>
+    </p>
+  </div>
+</div>
