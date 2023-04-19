@@ -1,7 +1,24 @@
-/*
+body {
 white: #f7f9f9;
 light-blue: #2081c3;
 dark-blue: #0a2c42;
 grey: #bfbfbf;
 font-family: Arial, Helvetica, sans-serif;
-*/
+}
+
+app.get('/home', (request, response, next) => {
+  response.send(`
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Ironbeers</title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+      </head>
+      <body>
+        <img src="public/images/cool-cat.jpg" />
+      </body>
+    </html>
+  `);
+});
+
