@@ -13,10 +13,9 @@ app.use(expressLayouts);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Add the route handlers here:
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
+app.get('/', (request, response, next) => response.sendFile(__dirname + '/views/home.html'));
+app.get('/beers', (request, response, next) => response.sendFile(__dirname + '/views/beers.ejs'));
+app.get('/random-beer', (request, response, next) => response.sendFile(__dirname + '/views/random-beer.html'));
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
